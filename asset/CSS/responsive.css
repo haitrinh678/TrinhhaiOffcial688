@@ -1,0 +1,99 @@
+/* Css Variable */
+:root {
+  --black: #222;
+  --green: #bac34e;
+  --white: #fff;
+  --light-color: #666;
+  --light-bg: #f3f3f3;
+  --border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  .active {
+    border: none !important;
+  }
+  .header {
+    padding: 2rem !important;
+  }
+  section {
+    padding: 3rem 2rem;
+  }
+  .home #next-slide,
+  .home #prev-slide {
+    transform: translateY(0);
+    top: 94%;
+  }
+  .home #prev-slide {
+    left: auto;
+    right: 8rem;
+  }
+}
+
+/* screen mobile  */
+@media (max-width: 767px) {
+  #menu-btn {
+    display: inline-block !important ;
+  }
+
+  .header .search-form {
+    width: 100% !important;
+    right: 0 !important;
+    border-radius: 0;
+  }
+  .active {
+    top: 99% !important;
+    border-top: var(--border);
+    border-bottom: var(--border);
+    transition: 0.3s linear;
+    opacity: 1 !important;
+  }
+
+  .header .nav-bar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    border-top: var(--border);
+    border-bottom: var(--border);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .active-menu {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%) !important;
+  }
+  .header .nav-bar a {
+    margin: 1.5rem;
+    padding: 1.5rem;
+    background: var(--light-bg);
+    display: block;
+    border-radius: 0.5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .slide .content h3 {
+    font-size: 5rem;
+  }
+  .box-container .box .icons {
+    height: 53rem;
+  }
+  .box-container .box h3 {
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+  .box-container .box a {
+    font-size: 1.7rem;
+    padding: 0.8rem 0;
+  }
+  .contact .row-contact form .inputBox input {
+    width: 100%;
+  }
+}
