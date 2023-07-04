@@ -365,10 +365,14 @@ form input[type="email"] {
   color: var(--light-color);
   font-size: 2.5rem;
 }
-.content h3 {
-  font-size: 6rem;
+.content-slide h3 {
+  font-size: 4.5rem;
   color: var(--black);
   padding: 0.5rem 0;
+}
+.content-slide span {
+  color: var(--light-color);
+  font-size: 2rem;
 }
 
 #next-slide,
