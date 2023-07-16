@@ -438,10 +438,13 @@ form input[type="email"] {
 .content span {
   color: var(--white);
   font-size: 1.5rem;
+}
+.content-home span {
   text-shadow: 0 0 4px #000;
   font-weight: 300;
 }
-.content h3 {
+
+.content-home h3 {
   font-size: 2rem;
   padding-top: 0.5rem;
   color: var(--white);
