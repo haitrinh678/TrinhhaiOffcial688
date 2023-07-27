@@ -1,795 +1,616 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nhà hàng Vũ Beer</title>
-    <link
-      rel="shortcut icon"
-      href="./asset/image/food-home/logo-beer-title.webp"
-      type="image/x-icon"
-    />
-    <!-- link font-awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <!-- css file link  -->
-    <link rel="stylesheet" href="./asset/CSS/style.css" />
-    <link rel="stylesheet" href="./asset/CSS/responsive.css" />
-  </head>
 
-  <body>
-    <!-- header section stars -->
-    <header class="header">
-      <a href="index.html" class="logo"><i class="fas fa-beer"></i>VuBeer</a>
-      <nav class="nav-bar">
-        <a href="#">Trang Chủ</a>
-        <a href="#Food_order">Món Ăn</a>
-        <a href="#about">Về chúng tôi</a>
-        <a href="#review">Đánh Giá</a>
-        <a href="#blogs">Bài viết</a>
-        <a href="#contact_us">Liên hệ</a>
-      </nav>
-      <div class="icons">
-        <div id="menu-btn" class="fas fa-bars"></div>
-        <div id="search-btn" class="fas fa-search"></div>
-        <div id="cart-btn" class="fas fa-shopping-cart"></div>
-        <div id="login-btn" class="fas fa-user"></div>
-      </div>
-      <form action="" class="search-form">
-        <input type="search" placeholder="Tìm Kiếm nào..." id="search-box" />
-        <label for="search-box" class="fas fa-search"></label>
-      </form>
-      <div class="shopping-cart">
-        <div class="box">
-          <i class="fas fa-times"></i>
-          <img src="./asset/image/food-cart/food_cart_1.jpg" alt="" />
-          <div class="content">
-            <h3>organic food</h3>
-            <span class="quantity">1</span>
-            <span class="multiply">x</span>
-            <span class="price">$18.99</span>
-          </div>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nhà hàng Vũ Beer</title>
+  <link rel="shortcut icon" href="./asset/image/food-home/logo-beer-title.webp" type="image/x-icon" />
+  <!-- link font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- css file link  -->
+  <link rel="stylesheet" href="./asset/CSS/style.css" />
+  <link rel="stylesheet" href="./asset/CSS/responsive.css" />
+</head>
 
-        <div class="box">
-          <i class="fas fa-times"></i>
-          <img src="./asset/image/food-cart/food_cart_2.jpg" alt="" />
-          <div class="content">
-            <h3>organic food</h3>
-            <span class="quantity">1</span>
-            <span class="multiply">x</span>
-            <span class="price">$18.99</span>
-          </div>
-        </div>
+<body>
+  <!-- header section stars -->
+  <header class="header">
+    <a href="index.html" class="logo"><img src="./asset/image/food-home/pngegg.png" alt=""
+        class="header__logo-png">VuBeer</a>
+    <nav class="nav-bar">
+      <a href="#">Trang Chủ</a>
+      <a href="#Food_order">Món Ăn</a>
+      <a href="./orderHistory.html">Đơn Hàng Của Tôi</a>
+      <a href="#about">Về Chúng Tôi</a>
+      <a href="#review">Đánh Giá</a>
+      <a href="#blogs">Bài Viết</a>
+      <a href="#contact_us">Liên Hệ</a>
+    </nav>
+    <div class="icons">
+      <div id="menu-btn" class="fas fa-bars"></div>
+      <div id="search-btn" class="fas fa-search"></div>
+      <div id="cart-btn" class="fas fa-shopping-cart"></div>
+      <div id="login-btn" class="fas fa-user"></div>
+    </div>
+    <form action="" class="search-form">
+      <input type="search" placeholder="Tìm Kiếm nào..." id="search-box" />
+      <label for="search-box" class="fas fa-search searchIcon"></label>
+    </form>
+    <div class="shopping-cart">
+      <div class="renderListCart">
 
-        <div class="box">
-          <i class="fas fa-times"></i>
-          <img src="asset/image/food-cart/food_cart_3.jpg" alt="" />
-          <div class="content">
-            <h3>organic food</h3>
-            <span class="quantity">1</span>
-            <span class="multiply">x</span>
-            <span class="price">$18.99</span>
-          </div>
-        </div>
-
-        <h3 class="total">total :<span>56.97</span></h3>
-        <a href="#" class="btn">checkout cart</a>
       </div>
 
-      <!-- form-login -->
-      <form action="" class="login-form">
-        <h3>Login form</h3>
-        <input type="email" placeholder="Email" class="box" />
-        <input type="password" placeholder="Password" class="box" />
+      <div class="renderTotal">
+        <!-- <h3 class="total">total :<span class='totalProduct'></span></h3>
+        <a href="#" class="btn">checkout cart</a> -->
+      </div>
+    </div>
+
+    <!-- form-login -->
+    <form class="login-form" id="login-form">
+      <div class="login">
+        <h3>Đăng Nhập</h3>
+        <input type="email" placeholder="Email" class="box" name="email" />
+        <input type="password" placeholder="Password" class="box" name="password" />
         <div class="remember">
           <input type="checkbox" name="" id="remember-me" />
-          <label for="remember-me">remember me</label>
+          <label for="remember-me">Ghi nhớ mật khẩu</label>
         </div>
         <input type="submit" value="login now" class="btn" />
         <p>Quên mật khẩu? <a href="#">click here</a></p>
-        <p>Bạn Chưa có tài khoản? <a href="#">Tạo tài khoản </a></p>
+        <p>
+          Bạn Chưa có tài khoản? <a href="./register.html">Tạo tài khoản </a>
+        </p>
+      </div>
+      <div style="display:flex;align-items: center;justify-content: space-around;" class="info-user">
+        <h3 style='display:flex;align-items: center;'></h3>
+        <!-- <h3>Login form</h3> -->
+        <div style="cursor: pointer;" class="logout">
+          </d>
+        </div>
+    </form>
+  </header>
+  <!-- header section Ends -->
+  <section class="home">
+    <div class="slides-container">
+      <div class="slide active">
+        <div class="content-slide">
+          <span>fresh and organic</span>
+          <h3>upto 50% off</h3>
+          <a href="#" class="btn">Mua ngay</a>
+        </div>
+        <div class="image">
+          <img src="./asset/image/food-home/thit_nuong.jpg" alt="" />
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="content-slide">
+          <span>fresh and organic</span>
+          <h3>upto 50% off</h3>
+          <a href="#" class="btn">Mua ngay</a>
+        </div>
+        <div class="image">
+          <img src="./asset/image/food-home/food-cachep.png " alt="" />
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="content-slide">
+          <span>fresh and organic</span>
+          <h3>upto 50% off</h3>
+          <a href="#" class="btn">Mua ngay</a>
+        </div>
+        <div class="image">
+          <img src="https://downloader.la/temp/[Downloader.la]-64c0a61f72cd2.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div id="next-slide" class="fas fa-angle-right" onclick="next()"></div>
+    <div id="prev-slide" class="fas fa-angle-left" onclick="prev()"></div>
+  </section>
+
+  <section class="banner-container">
+    <div class="banner">
+      <img src="./asset/image/food-banner/banner-home/banner_1.png" alt="" />
+      <div class="content content-home">
+        <span>limited sales</span>
+        <h3>upto 50% off</h3>
+        <a href="" class="btn">Mua ngay</a>
+      </div>
+    </div>
+
+    <div class="banner">
+      <img src="./asset/image/food-banner/banner-home/banner_2.png" alt="" />
+      <div class="content content-home">
+        <span>limited sales</span>
+        <h3>upto 50% off</h3>
+        <a href="" class="btn">Mua ngay</a>
+      </div>
+    </div>
+
+    <div class="banner">
+      <img src="./asset/image/food-banner/banner-home/banner_3.png" alt="" />
+      <div class="content content-home">
+        <span>limited sales</span>
+        <h3>upto 50% off</h3>
+        <a href="" class="btn">Mua ngay</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="category">
+    <h1 class="title">our<span>category</span><a href="#">view all >></a></h1>
+    <div class="box-container">
+      <a href="#" class="box">
+        <img src="./asset/image/food-cart/cart_shop/shop-cart_1.png" alt="" class="box-cart-shop" />
+        <h3>Trái Cây Tươi</h3>
+      </a>
+
+      <a href="#" class="box">
+        <img src="./asset/image/food-cart/cart_shop/shop-cart_2.png" alt="" class="box-cart-shop" />
+        <h3>Thảo mộc</h3>
+      </a>
+
+      <a href="#" class="box">
+        <img src="./asset/image/food-cart/cart_shop/shop-cart_3.png" alt="" class="box-cart-shop" />
+        <h3>gia vị hữu cơ</h3>
+      </a>
+
+      <a href="#" class="box">
+        <img src="./asset/image/food-cart/cart_shop/shop-cart_4.png" alt="" class="box-cart-shop" />
+        <h3>Giải Khát Bia</h3>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="products" id="Food_order">
+    <h1 class="title">our<span>Products</span><a href="#">view all >></a></h1>
+
+    <div class="box-container" id="list-item">
+      <!-- <div class="box">
+          <div class="icons">
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+          </div>
+
+          <div class="image">
+            <img src="./asset/image/food-menu/food-menu_5.png" alt="" />
+          </div>
+
+          <div class="content">
+            <h3>organic food</h3>
+            <div class="price">$18.99</div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+        </div>
+         <div class="box">
+          <div class="icons">
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+          </div>
+
+          <div class="image">
+            <img src="./asset/image/food-menu/food-menu_5.png" alt="" />
+          </div>
+
+          <div class="content">
+            <h3>organic food</h3>
+            <div class="price">$18.99</div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+        </div> -->
+    </div>
+  </section>
+  <div class="heading" id="about">
+    <h1>Về chúng tôi</h1>
+    <p><a href="#">Trang chủ>></a>Về chúng tôi</p>
+  </div>
+  <section class="about">
+    <div class="image">
+      <img src="./asset/image/food-about/barbecue_1.jpg" alt="" />
+    </div>
+
+    <div class="content-about">
+      <span>Welcome to Nhà Hàng Vũ Beer</span>
+      <h3>Nhà Hàng Vũ Beer Luôn Mong Muốn ! </h3>
+      <p>
+        Bản thân Nhà Hàng là một Doanh Nghiệp rất thành công. Tôi không yêu
+        cầu chúng ta phải bán lời lãi nhiều, không để đồng tiền làm mất đi hương vị món ăn đảm bảo chất lượng hoặc uy
+        tín của chúng tôi.
+      </p>
+      <p>
+        Bản thân khách hàng, khách hàng sẽ có thể theo đuổi sự thành công Của Nhà Hàng và sự cuốn hút
+        chính là đến từ những hương vị món ăn và chất lượng Sản phẩm.
+      </p>
+      <a href="#" class="btn">đọc thêm</a>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <h1 class="title">our<span>gallery</span><a href="#">view all >></a></h1>
+
+    <div class="box-container-about">
+      <div class="box">
+        <img src="./asset/image/food-about/food_about_img8/1.jpg" alt="" />
+        <div class="icons-about">
+          <a href="#" class="fas fa-eye"></a>
+          <a href="#" class="fas fa-heart"></a><a href="#" class="fas fa-share-alt"></a>
+        </div>
+      </div>
+      <div class="box">
+        <img src="./asset/image/food-about/food_about_img8/2.jpg" alt="" />
+        <div class="icons-about">
+          <a href="#" class="fas fa-eye"></a>
+          <a href="#" class="fas fa-heart"></a><a href="#" class="fas fa-share-alt"></a>
+        </div>
+      </div>
+      <div class="box">
+        <img src="./asset/image/food-about/food_about_img8/4.jpg" alt="" />
+        <div class="icons-about">
+          <a href="#" class="fas fa-eye"></a>
+          <a href="#" class="fas fa-heart"></a><a href="#" class="fas fa-share-alt"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="./asset/image/food-about/food_about_img8/5.jpg" alt="" />
+        <div class="icons-about">
+          <a href="#" class="fas fa-eye"></a>
+          <a href="#" class="fas fa-heart"></a><a href="#" class="fas fa-share-alt"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="./asset/image/food-about/food_about_img8/6.jpg" alt="" />
+        <div class="icons-about">
+          <a href="#" class="fas fa-eye"></a>
+          <a href="#" class="fas fa-heart"></a><a href="#" class="fas fa-share-alt"></a>
+        </div>
+      </div>
+      <div class="box">
+        <img src="./asset/image/food-about/food_about_img8/8.jpg" alt="" />
+        <div class="icons-about">
+          <a href="#" class="fas fa-eye"></a>
+          <a href="#" class="fas fa-heart"></a><a href="#" class="fas fa-share-alt"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="heading" id="review">
+    <h1>Đánh giá</h1>
+    <p><a href="index.html">Trang chủ>></a>Đánh giá</p>
+  </div>
+
+  <section class="info-container">
+    <div class="info-review">
+      <img src="./asset/image/food-review/fast_1.png" alt="" />
+      <div class="content-review">
+        <h3>Chuyển phát nhanh</h3>
+        <span>Trong vòng 30 phút</span>
+      </div>
+    </div>
+
+    <div class="info-review">
+      <img src="./asset/image/food-review/fast_1.png" alt="" />
+      <div class="content-review">
+        <h3> Giao hàng 24 / 7 </h3>
+        <span>Gọi cho chúng tôi bất cứ khi nào</span>
+      </div>
+    </div>
+
+    <div class="info-review">
+      <img src="./asset/image/food-review/fast_1.png" alt="" />
+      <div class="content-review">
+        <h3>Thanh toán dễ dàng</h3>
+        <span>Tiền mặt hoặc chuyển khoản</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="review">
+    <div class="box-review">
+      <div class="user">
+        <img src="./asset/image/food-review/avatar_1.jpg" alt="" />
+        <div class="info-customer">
+          <h3>Trịnh Đình Hải</h3>
+          <span> khách hàng thân thiết </span>
+        </div>
+      </div>
+      <p>Thái độ phục vụ niềm nở, đồ ăn ngon, không gian tiệc cưới đẹp và sang trọng.</p>
+    </div>
+
+    <div class="box-review">
+      <div class="user">
+        <img src="./asset/image/food-review/avatar_2.jpg" alt="" />
+        <div class="info-customer">
+          <h3>Lê Thị Hiền</h3>
+          <span> khách hàng </span>
+        </div>
+      </div>
+      <p>Tinh thần, thái độ của anh chị em nhân viên nhà hàng hết sức nhiệt tình, rất tốt và chu đáo, chị Nguyên giám
+        đốc cũng
+        hết sức tận tình với khách hàng</p>
+    </div>
+
+    <div class="box-review">
+      <div class="user">
+        <img src="./asset/image/food-review/avatar_3.jpg" alt="" />
+        <div class="info-customer">
+          <h3>Triệu Thị Phin</h3>
+          <span> khách hàng </span>
+        </div>
+      </div>
+      <p>– Chỗ để xe thoải mái
+        – Đón tiếp và phục vụ chu đáo
+        – Đồ ăn an toàn vệ sinh thực phẩm</p>
+    </div>
+
+    <div class="box-review">
+      <div class="user">
+        <img src="./asset/image/food-review/avatar_4.jpg" alt="" />
+        <div class="info-customer">
+          <h3>Lê Thị Tú Oanh</h3>
+          <span> khách hàng </span>
+        </div>
+      </div>
+      <p>Ủng hộ Vubeer, lúc trước mình đã tổ chức sn cho con gái mình ở đây rồi, cả nhà rất hải lòng về Nhà hàng, nên
+        lần này, Sinh Nhật
+        mình cũng quyết định sẽ lại ở NH, tks</p>
+    </div>
+
+    <div class="box-review">
+      <div class="user">
+        <img src="./asset/image/food-review/avatar_6.jpg" alt="" />
+        <div class="info-customer">
+          <h3>Trình Thị Duyên</h3>
+          <span> khách hàng VIP </span>
+        </div>
+      </div>
+      <p>Rất hài lòng về cách phục vụ và đồ ăn của nhà hàng. Thú thật là hơn Biển Đông nhiều...</p>
+    </div>
+    <div class="box-review">
+      <div class="user">
+        <img src="./asset/image/food-review/avatar_5.jpg" alt="" />
+        <div class="info-customer">
+          <h3>Nguyễn Thị Nga</h3>
+          <span> khách hàng </span>
+        </div>
+      </div>
+      <p>Tôi thường đưa gia đình đến ăn tại đây và rất hài lòng về nhà hàng này.</p>
+    </div>
+    <div class="box-review">
+      <div class="user">
+        <img src="./asset/image/food-review/avatar_7.jpg" alt="" />
+        <div class="info-customer">
+          <h3>Lê Quỳnh Anh</h3>
+          <span> khách hàng VIP</span>
+        </div>
+      </div>
+      <p>Không gian rộng, hoành tráng, đồ ăn ở đây cũng ổn mà hôm trước tổ chức sinh nhật cho con gái còn được tặng bánh
+        sinh
+        nhật.</p>
+    </div>
+
+    <div class="box-review">
+      <div class="user">
+        <img src="./asset/image/food-review/avatar_8.jpg" alt="" />
+        <div class="info-customer">
+          <h3>Hà Văn Thủy</h3>
+          <span> khách hàng VIP </span>
+        </div>
+      </div>
+      <p> Phải nói từ khâu đặt chỗ cho đến thưởng thức tại nhà hàng mình cảm thấy hết sức hài lòng. Nhân viên rất nhiệt
+        tình và
+        chu đáo.</p>
+    </div>
+  </section>
+
+  <div class="heading" id="blogs">
+    <h1>Blogs của chúng tôi</h1>
+    <p><a href="index.html">Trang chủ>></a>blogs</p>
+  </div>
+  <section class="blogs">
+    <h1 class="title">our<span>blogs</span><a href="#">view all >></a></h1>
+    <div class="box-container-blogs">
+      <div class="box">
+        <div class="image">
+          <img src="./asset/image/food-blogs/food_1.png" alt="" />
+        </div>
+        <div class="content-blogs">
+          <div class="icons-blogs">
+            <a href="#"><i class="fas fa-calendar"></i>21st may, 2022</a>
+            <a href="#"><i class="fas fa-user"></i>by admin</a>
+          </div>
+          <h3>Trứng Ốp Bitter melon</h3>
+          <p>Điều rất quan trọng là bạn cảm nhận được hương vị món ăn
+            !</p>
+          <a href="#" class="btn">đọc thêm</a>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img src="./asset/image/food-blogs/food_2.jpg" alt="" />
+        </div>
+        <div class="content-blogs">
+          <div class="icons-blogs">
+            <a href="#"><i class="fas fa-calendar"></i>18st October, 2022</a>
+            <a href="#"><i class="fas fa-user"></i>by admin</a>
+          </div>
+          <h3>Đậu phụ Steamed bones</h3>
+          <p>Nếu bạn đang ở Hà Nội, hãy ghé thăm Vũ Beer và thưởng thức hương vị ở đó !</p>
+          <a href="#" class="btn">đọc thêm</a>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img src="./asset/image/food-blogs/food_3.jpg" alt="" />
+        </div>
+        <div class="content-blogs">
+          <div class="icons-blogs">
+            <a href="#"><i class="fas fa-calendar"></i>12st December, 2022</a>
+            <a href="#"><i class="fas fa-user"></i>by admin</a>
+          </div>
+          <h3>Ghẹ biển Exhaust</h3>
+          <p>Cùng với hương vị ngọt ngào, chúng tôi luôn muốn mang đến cho bạn cảm giác tuyệt vời nhất !</p>
+          <a href="#" class="btn">đọc thêm</a>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img src="./asset/image/food-blogs/food_4.jpg" alt="" />
+        </div>
+        <div class="content-blogs">
+          <div class="icons-blogs">
+            <a href="#"><i class="fas fa-calendar"></i>8st January, 2023</a>
+            <a href="#"><i class="fas fa-user"></i>by admin</a>
+          </div>
+          <h3>Cá Thu Cauliflower tongs</h3>
+          <p>Hạ qua thu lại tới, hãy cùng tận hưởng những điều tuyệt vời nhất !</p>
+          <a href="#" class="btn">đọc thêm</a>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img src="./asset/image/food-blogs/food_5.jpg" alt="" />
+        </div>
+        <div class="content-blogs">
+          <div class="icons-blogs">
+            <a href="#"><i class="fas fa-calendar"></i>24st March, 2023</a>
+            <a href="#"><i class="fas fa-user"></i>by admin</a>
+          </div>
+          <h3>Hàu biển tươi</h3>
+          <p>Yêu là phải nói ! đói là phải ăn, cùng nhau tận hưởng và trải nghiệm là điều ta thích nhất !</p>
+          <a href="#" class="btn">đọc thêm</a>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img src="./asset/image/food-blogs/food_6.jpg" alt="" />
+        </div>
+        <div class="content-blogs">
+          <div class="icons-blogs">
+            <a href="#"><i class="fas fa-calendar"></i>26st July, 2023</a>
+            <a href="#"><i class="fas fa-user"></i>by admin</a>
+          </div>
+          <h3>Ốc lồi chili pepper</h3>
+          <p>Vị chua chua, cay cay và suýt xoa... ,mang cho ta cảm giác nồng say !</p>
+          <a href="#" class="btn">đọc thêm</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="heading" id="contact_us">
+    <h1>Liên hệ chúng tôi</h1>
+    <p><a href="index.html">Trang chủ>></a>Liên hệ chúng tôi</p>
+  </div>
+
+  <section class="contact">
+    <div class="icon-container">
+      <div class="icons-contact">
+        <i class="fas fa-phone"></i>
+        <h3>Phone</h3>
+        <p>+84.355.768.668</p>
+        <p>+84.967.279.306</p>
+      </div>
+
+      <div class="icons-contact">
+        <i class="fas fa-envelope"></i>
+        <h3>Email</h3>
+        <p>trinhdinhhai688@gmail.com</p>
+        <p>nhahanghaisan@gmail.com</p>
+      </div>
+
+      <div class="icons-contact">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Address</h3>
+        <p>Trường đại học Công nghệ Đông Á <br> Nam Từ Liêm, Hà Nội</p>
+      </div>
+    </div>
+
+    <div class="row-contact">
+      <form action="submit">
+        <h3 style="text-align: center;">Đóng Góp Ý Kiến</h3>
+        <div class="inputBox">
+          <input type="text" placeholder="Nhập tên của bạn... " required class="boxs" />
+          <input type="email" placeholder="Email của bạn..." required class="boxs" />
+        </div>
+        <div class="inputBox">
+          <input type="number" placeholder="Số điện thoại" required class="boxs" />
+          <input type="text" placeholder="Chủ đề của bạn" required class="boxs" />
+        </div>
+        <textarea placeholder="Ý kiến đóng góp" cols="30" rows="10"></textarea>
+        <input type="submit" value="Gửi tin nhắn" class="btn" />
       </form>
-    </header>
-    <!-- header section Ends -->
-    <section class="home">
-      <div class="slides-container">
-        <div class="slide active">
-          <div class="content-slide">
-            <span>fresh and organic</span>
-            <h3>upto 50% off</h3>
-            <a href="#" class="btn">shop now</a>
-          </div>
-          <div class="image">
-            <img src="./asset/image/food-home/merchan.webp" alt="" />
-          </div>
-        </div>
-
-        <div class="slide">
-          <div class="content-slide">
-            <span>fresh and organic</span>
-            <h3>upto 50% off</h3>
-            <a href="#" class="btn">shop now</a>
-          </div>
-          <div class="image">
-            <img src="./asset/image/food-home/apple-1049849_1280.png" alt="" />
-          </div>
-        </div>
-
-        <div class="slide">
-          <div class="content-slide">
-            <span>fresh and organic</span>
-            <h3>upto 50% off</h3>
-            <a href="#" class="btn">shop now</a>
-          </div>
-          <div class="image">
-            <img src="./asset/image/food-home/chinese-food-3.jpg" alt="" />
-          </div>
-        </div>
-      </div>
-
-      <div id="next-slide" class="fas fa-angle-right" onclick="next()"></div>
-      <div id="prev-slide" class="fas fa-angle-left" onclick="prev()"></div>
-    </section>
-
-    <section class="banner-container">
-      <div class="banner">
-        <img src="./asset/image/food-banner/banner-home/banner_1.png" alt="" />
-        <div class="content content-home">
-          <span>limited sales</span>
-          <h3>upto 50% off</h3>
-          <a href="" class="btn">shop now</a>
-        </div>
-      </div>
-
-      <div class="banner">
-        <img src="./asset/image/food-banner/banner-home/banner_2.png" alt="" />
-        <div class="content content-home">
-          <span>limited sales</span>
-          <h3>upto 50% off</h3>
-          <a href="" class="btn">shop now</a>
-        </div>
-      </div>
-
-      <div class="banner">
-        <img src="./asset/image/food-banner/banner-home/banner_3.png" alt="" />
-        <div class="content content-home">
-          <span>limited sales</span>
-          <h3>upto 50% off</h3>
-          <a href="" class="btn">shop now</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="category">
-      <h1 class="title">our<span>category</span><a href="#">view all >></a></h1>
-      <div class="box-container" id="Food_order">
-        <a href="#" class="box">
-          <img
-            src="./asset/image/food-cart/cart_shop/shop-cart_1.png"
-            alt=""
-            class="box-cart-shop"
-          />
-          <h3>fresh fruits</h3>
-        </a>
-
-        <a href="#" class="box">
-          <img
-            src="./asset/image/food-cart/cart_shop/shop-cart_2.png"
-            alt=""
-            class="box-cart-shop"
-          />
-          <h3>vegatables</h3>
-        </a>
-
-        <a href="#" class="box">
-          <img
-            src="./asset/image/food-cart/cart_shop/shop-cart_3.png"
-            alt=""
-            class="box-cart-shop"
-          />
-          <h3>organic spices</h3>
-        </a>
-
-        <a href="#" class="box">
-          <img
-            src="./asset/image/food-cart/cart_shop/shop-cart_4.png"
-            alt=""
-            class="box-cart-shop"
-          />
-          <h3>fresh meat</h3>
-        </a>
-
-        <a href="#" class="box">
-          <img
-            src="./asset/image/food-cart/cart_shop/shop-cart_5.png"
-            alt=""
-            class="box-cart-shop"
-          />
-          <h3>oeganic wheat</h3>
-        </a>
-      </div>
-    </section>
-
-    <section class="products">
-      <h1 class="title">our<span>Products</span><a href="#">view all >></a></h1>
-
-      <div class="box-container">
-        <div class="box">
-          <div class="icons">
-            <a href="#" class="fas fa-shopping-cart"></a>
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
-          </div>
-
-          <div class="image">
-            <img src="./asset/image/food-menu/food-menu_5.png" alt="" />
-          </div>
-
-          <div class="content">
-            <h3>organic food</h3>
-            <div class="price">$18.99</div>
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="icons">
-            <a href="#" class="fas fa-shopping-cart"></a>
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
-          </div>
-          <div class="image">
-            <img src="./asset/image/food-menu/food-menu_5.png" alt="" />
-          </div>
-          <div class="content">
-            <h3>organic food</h3>
-            <div class="price">$18.99</div>
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="icons">
-            <a href="#" class="fas fa-shopping-cart"></a>
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
-          </div>
-          <div class="image">
-            <img src="./asset/image/food-menu/food-menu_5.png" alt="" />
-          </div>
-          <div class="content">
-            <h3>organic food</h3>
-            <div class="price">$18.99</div>
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="icons">
-            <a href="#" class="fas fa-shopping-cart"></a>
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
-          </div>
-          <div class="image">
-            <img src="./asset/image/food-menu/food-menu_5.png" alt="" />
-          </div>
-          <div class="content">
-            <h3>organic food</h3>
-            <div class="price">$18.99</div>
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="icons">
-            <a href="#" class="fas fa-shopping-cart"></a>
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
-          </div>
-          <div class="image">
-            <img src="./asset/image/food-menu/food-menu_5.png" alt="" />
-          </div>
-          <div class="content">
-            <h3>organic food</h3>
-            <div class="price">$18.99</div>
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="icons">
-            <a href="#" class="fas fa-shopping-cart"></a>
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
-          </div>
-          <div class="image">
-            <img src="./asset/image/food-menu/food-menu_5.png" alt="" />
-          </div>
-          <div class="content">
-            <h3>organic food</h3>
-            <div class="price">$18.99</div>
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="icons">
-            <a href="#" class="fas fa-shopping-cart"></a>
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
-          </div>
-          <div class="image">
-            <img src="./asset/image/food-menu/food-menu_5.png" alt="" />
-          </div>
-          <div class="content">
-            <h3>organic food</h3>
-            <div class="price">$18.99</div>
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="icons">
-            <a href="#" class="fas fa-shopping-cart"></a>
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
-          </div>
-          <div class="image">
-            <img src="./asset/image/food-menu/food-menu_5.png" alt="" />
-          </div>
-          <div class="content">
-            <h3>organic food</h3>
-            <div class="price">$18.99</div>
-            <div class="stars">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="heading" id="about">
-      <h1>Về chúng tôi</h1>
-      <p><a href="#">Trang chủ>></a>Về chúng tôi</p>
+      <iframe class="maps"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3723.816939243322!2d105.7419583!3d21.0400095!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135096b31fa7abb%3A0xff645782804911af!2zVHLGsOG7nW5nIMSR4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgxJDDtG5nIMOB!5e0!3m2!1svi!2s!4v1690356376119!5m2!1svi!2s"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-    <section class="about">
-      <div class="image">
-        <img src="./asset/image/food-about/barbecue_1.jpg" alt="" />
+  </section>
+  <!-- footer section stars  -->
+  <section class="footer">
+    <div class="box-container">
+      <div class="box">
+        <h3>Liên kết Nhanh</h3>
+        <a href="./orderHistory.html"><i class="fas fa-arrow-right"></i>Đơn Hàng Của Tôi</a>
+        <a href="#Food_order"><i class="fas fa-arrow-right"></i>Món ăn </a>
+        <a href="#"><i class="fas fa-arrow-right"></i>Sản phẩm yêu thích</a>
+        <a href="#"><i class="fas fa-arrow-right"></i>Tài khoản của tôi</a>
+        <a href="#"><i class="fas fa-arrow-right"></i>điều khoản hoặc sử dụng</a>
       </div>
 
-      <div class="content-about">
-        <span>welcome to our shop</span>
-        <h3>fresh and organic groceries</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae vel
-          sequi nostrum quae nobis non quaerat nisi voluptatibus recusandae
-          reprehenderit tempore eligendi, eum quibusdam perferendis dicta,
-          incidunt dolores nemo ex.
-        </p>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem
-          cumque molestiae blanditiis deleniti aspernatur, ab tempora quisquam
-          sapiente commodi hic.
-        </p>
-        <a href="#" class="btn">read more</a>
-      </div>
-    </section>
-
-    <section class="gallery">
-      <h1 class="title">our<span>gallery</span><a href="#">view all >></a></h1>
-
-      <div class="box-container-about">
-        <div class="box">
-          <img src="./asset/image/food-about/nhân-viên-phục-vụ.jpeg" alt="" />
-          <div class="icons-about">
-            <a href="#" class="fas fa-eye"></a>
-            <a href="#" class="fas fa-heart"></a
-            ><a href="#" class="fas fa-share-alt"></a>
-          </div>
-        </div>
-
-        <div class="box">
-          <img src="./asset/image/food-about/nhân-viên-phục-vụ.jpeg" alt="" />
-          <div class="icons-about">
-            <a href="#" class="fas fa-eye"></a>
-            <a href="#" class="fas fa-heart"></a
-            ><a href="#" class="fas fa-share-alt"></a>
-          </div>
-        </div>
-
-        <div class="box">
-          <img src="./asset/image/food-about/nhân-viên-phục-vụ.jpeg" alt="" />
-          <div class="icons-about">
-            <a href="#" class="fas fa-eye"></a>
-            <a href="#" class="fas fa-heart"></a
-            ><a href="#" class="fas fa-share-alt"></a>
-          </div>
-        </div>
-
-        <div class="box">
-          <img src="./asset/image/food-about/nhân-viên-phục-vụ.jpeg" alt="" />
-          <div class="icons-about">
-            <a href="#" class="fas fa-eye"></a>
-            <a href="#" class="fas fa-heart"></a
-            ><a href="#" class="fas fa-share-alt"></a>
-          </div>
-        </div>
-
-        <div class="box">
-          <img src="./asset/image/food-about/nhân-viên-phục-vụ.jpeg" alt="" />
-          <div class="icons-about">
-            <a href="#" class="fas fa-eye"></a>
-            <a href="#" class="fas fa-heart"></a
-            ><a href="#" class="fas fa-share-alt"></a>
-          </div>
-        </div>
-
-        <div class="box">
-          <img src="./asset/image/food-about/nhân-viên-phục-vụ.jpeg" alt="" />
-          <div class="icons-about">
-            <a href="#" class="fas fa-eye"></a>
-            <a href="#" class="fas fa-heart"></a
-            ><a href="#" class="fas fa-share-alt"></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="heading" id="review">
-      <h1>Đánh giá</h1>
-      <p><a href="index.html">Trang chủ>></a>Đánh giá</p>
-    </div>
-
-    <section class="info-container">
-      <div class="info-review">
-        <img src="./asset/image/food-review/fast_1.png" alt="" />
-        <div class="content-review">
-          <h3>fast delivery</h3>
-          <span>within 30 minutes</span>
-        </div>
+      <div class="box">
+        <h3>Social media</h3>
+        <a href="#"><i class="fab fa-facebook-f"></i>facebook</a>
+        <a href="#"><i class="fab fa-twitter"></i>twitter</a>
+        <a href="#"><i class="fab fa-instagram"></i>instagram</a>
+        <a href="#"><i class="fab fa-linkedin"></i>linkedin</a>
+        <a href="#"><i class="fab fa-telegram"></i>telegram</a>
       </div>
 
-      <div class="info-review">
-        <img src="./asset/image/food-review/fast_1.png" alt="" />
-        <div class="content-review">
-          <h3>24 / 7 available</h3>
-          <span>call us anytime</span>
-        </div>
-      </div>
-
-      <div class="info-review">
-        <img src="./asset/image/food-review/fast_1.png" alt="" />
-        <div class="content-review">
-          <h3>easy payments</h3>
-          <span>cash or credits</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="review">
-      <div class="box-review">
-        <div class="user">
-          <img src="./asset/image/food-review/avatar_1.jpg" alt="" />
-          <div class="info-customer">
-            <h3>Trịnh Đình Hải</h3>
-            <span>Xin chào khách hàng </span>
-          </div>
-        </div>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem</p>
-      </div>
-
-      <div class="box-review">
-        <div class="user">
-          <img src="./asset/image/food-review/avatar_2.jfif" alt="" />
-          <div class="info-customer">
-            <h3>Trịnh Đình Hải</h3>
-            <span>Xin chào khách hàng </span>
-          </div>
-        </div>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem</p>
-      </div>
-
-      <div class="box-review">
-        <div class="user">
-          <img src="./asset/image/food-review/avatar_3.jpg" alt="" />
-          <div class="info-customer">
-            <h3>Trịnh Đình Hải</h3>
-            <span>Xin chào khách hàng </span>
-          </div>
-        </div>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem</p>
-      </div>
-
-      <div class="box-review">
-        <div class="user">
-          <img src="./asset/image/food-review/avatar_4.jpg" alt="" />
-          <div class="info-customer">
-            <h3>Trịnh Đình Hải</h3>
-            <span>Xin chào khách hàng </span>
-          </div>
-        </div>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem</p>
-      </div>
-
-      <div class="box-review">
-        <div class="user">
-          <img src="./asset/image/food-review/avatar_5.jpg" alt="" />
-          <div class="info-customer">
-            <h3>Trịnh Đình Hải</h3>
-            <span>Xin chào khách hàng </span>
-          </div>
-        </div>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem</p>
-      </div>
-
-      <div class="box-review">
-        <div class="user">
-          <img src="./asset/image/food-review/avatar_6.jpg" alt="" />
-          <div class="info-customer">
-            <h3>Trịnh Đình Hải</h3>
-            <span>Xin chào khách hàng </span>
-          </div>
-        </div>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem</p>
-      </div>
-    </section>
-
-    <div class="heading" id="blogs">
-      <h1>Blogs của chúng tôi</h1>
-      <p><a href="index.html">Trang chủ>></a>blogs</p>
-    </div>
-    <section class="blogs">
-      <h1 class="title">our<span>blogs</span><a href="#">view all >></a></h1>
-      <div class="box-container-blogs">
-        <div class="box">
-          <div class="image">
-            <img src="./asset/image/food-blogs/food_1.png" alt="" />
-          </div>
-          <div class="content-blogs">
-            <div class="icons-blogs">
-              <a href="#"><i class="fas fa-calendar"></i>21st may, 2021</a>
-              <a href="#"><i class="fas fa-user"></i>by admin</a>
-            </div>
-            <h3>blogs title goes here</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit !</p>
-            <a href="#" class="btn">read more</a>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="image">
-            <img src="./asset/image/food-blogs/food_2.jpg" alt="" />
-          </div>
-          <div class="content-blogs">
-            <div class="icons-blogs">
-              <a href="#"><i class="fas fa-calendar"></i>21st may, 2021</a>
-              <a href="#"><i class="fas fa-user"></i>by admin</a>
-            </div>
-            <h3>blogs title goes here</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit !</p>
-            <a href="#" class="btn">read more</a>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="image">
-            <img src="./asset/image/food-blogs/food_3.jpg" alt="" />
-          </div>
-          <div class="content-blogs">
-            <div class="icons-blogs">
-              <a href="#"><i class="fas fa-calendar"></i>21st may, 2021</a>
-              <a href="#"><i class="fas fa-user"></i>by admin</a>
-            </div>
-            <h3>blogs title goes here</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit !</p>
-            <a href="#" class="btn">read more</a>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="image">
-            <img src="./asset/image/food-blogs/food_2.jpg" alt="" />
-          </div>
-          <div class="content-blogs">
-            <div class="icons-blogs">
-              <a href="#"><i class="fas fa-calendar"></i>21st may, 2021</a>
-              <a href="#"><i class="fas fa-user"></i>by admin</a>
-            </div>
-            <h3>blogs title goes here</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit !</p>
-            <a href="#" class="btn">read more</a>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="image">
-            <img src="./asset/image/food-blogs/food_3.jpg" alt="" />
-          </div>
-          <div class="content-blogs">
-            <div class="icons-blogs">
-              <a href="#"><i class="fas fa-calendar"></i>21st may, 2021</a>
-              <a href="#"><i class="fas fa-user"></i>by admin</a>
-            </div>
-            <h3>blogs title goes here</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit !</p>
-            <a href="#" class="btn">read more</a>
-          </div>
-        </div>
-
-        <div class="box">
-          <div class="image">
-            <img src="./asset/image/food-blogs/food_1.png" alt="" />
-          </div>
-          <div class="content-blogs">
-            <div class="icons-blogs">
-              <a href="#"><i class="fas fa-calendar"></i>21st may, 2021</a>
-              <a href="#"><i class="fas fa-user"></i>by admin</a>
-            </div>
-            <h3>blogs title goes here</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit !</p>
-            <a href="#" class="btn">read more</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="heading" id="contact_us">
-      <h1>Liên hệ chúng tôi</h1>
-      <p><a href="index.html">Trang chủ>></a>Liên hệ chúng tôi</p>
-    </div>
-
-    <section class="contact">
-      <div class="icon-container">
-        <div class="icons-contact">
-          <i class="fas fa-phone"></i>
-          <h3>Số điện thoại</h3>
-          <p>+84.355.724.014</p>
-          <p>+84.967.279.304</p>
-        </div>
-
-        <div class="icons-contact">
-          <i class="fas fa-envelope"></i>
-          <h3>Email</h3>
-          <p>trinhdinhhai688@gmail.com</p>
-          <p>nhahanghaisan@gmail.com</p>
-        </div>
-
-        <div class="icons-contact">
-          <i class="fas fa-map-marker-alt"></i>
-          <h3>Address</h3>
-          <p>Nam từ liêm, Thành Phố Hà Nội</p>
-        </div>
-      </div>
-
-      <div class="row-contact">
+      <div class="box">
+        <h3>Bản tin hàng ngày</h3>
+        <p>Đăng ký để cập nhật mới nhất</p>
         <form action="">
-          <h3>get in touch</h3>
-          <div class="inputBox">
-            <input
-              type="text"
-              placeholder="enter your name"
-              required
-              class="boxs"
-            />
-            <input
-              type="email"
-              placeholder="enter your email"
-              required
-              class="boxs"
-            />
-          </div>
-          <div class="inputBox">
-            <input
-              type="number"
-              placeholder="enter your number"
-              required
-              class="boxs"
-            />
-            <input
-              type="text"
-              placeholder="enter your subject"
-              required
-              class="boxs"
-            />
-          </div>
-          <textarea placeholder="you message" cols="30" rows="10"></textarea>
-          <input type="submit" value="Send message" class="btn" />
+          <input type="email" required placeholder="Email Của bạn..." id="" />
+          <input type="submit" value="Đăng ký" class="btn" />
         </form>
-        <iframe
-          class="maps"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59589.22451534839!2d105.72039152198538!3d21.01961676208683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454a1080e72f3%3A0xb08bae358d43e397!2zTmFtIFThu6sgTGnDqm0sIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1688084912674!5m2!1svi!2s"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+        <img src="./asset/image/payment/payment_1.png" class="pay-ments" />
       </div>
-    </section>
-    <!-- footer section stars  -->
-    <section class="footer">
-      <div class="box-container">
-        <div class="box">
-          <h3>extra links</h3>
-          <a href="#"><i class="fas fa-arrow-right"></i>my order</a>
-          <a href="#"><i class="fas fa-arrow-right"></i>my favorite</a>
-          <a href="#"><i class="fas fa-arrow-right"></i>my wishlist</a>
-          <a href="#"><i class="fas fa-arrow-right"></i>my account</a>
-          <a href="#"><i class="fas fa-arrow-right"></i>terms or use</a>
-        </div>
+    </div>
+  </section>
 
-        <div class="box">
-          <h3>follow me</h3>
-          <a href="#"><i class="fab fa-facebook-f"></i>facebook</a>
-          <a href="#"><i class="fab fa-twitter"></i>twitter</a>
-          <a href="#"><i class="fab fa-instagram"></i>instagram</a>
-          <a href="#"><i class="fab fa-linkedin"></i>linkedin</a>
-          <a href="#"><i class="fab fa-telegram"></i>telegram</a>
-        </div>
+  <!-- footer section Ends -->
 
-        <div class="box">
-          <h3>newsletter</h3>
-          <p>subscribe for latest updates</p>
-          <form action="">
-            <input type="email" required placeholder="enter your email" id="" />
-            <input type="submit" value="subscribe" class="btn" />
-          </form>
-          <img src="./asset/image/payment/payment_1.png" class="pay-ments" />
-        </div>
-      </div>
-    </section>
-    <section class="credit">
-      created by Trinh Dinh Hai designer | all rights reserved!
-    </section>
-    <!-- footer section Ends -->
+  <!-- link css js  -->
+  <script src="./node_modules/axios/dist/axios.min.js"></script>
 
-    <!-- link css js  -->
-    <script src="./asset/Js/script.js"></script>
-  </body>
+  <script src="./asset/Js/script.js"></script>
+</body>
+
 </html>

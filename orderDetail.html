@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi Tiết Đơn Hàng</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="./asset/CSS/style.css" />
+  <link rel="stylesheet" href="./asset/CSS/table.css" />
+  <link rel="stylesheet" href="./asset/CSS/responsive.css" />
+
+
+</head>
+
+<body>
+  <style>
+    table {
+      font-size: 100%;
+
+    }
+
+    tbody tr td img {
+      object-fit: cover;
+    }
+  </style>
+  <header class="header">
+    <a href="index.html" class="logo"><img src="./asset/image/food-home/pngegg.png" alt=""
+        class="header__logo-png">VuBeer</a>
+    <nav class="nav-bar">
+      <a href="./index.html">Trang Chủ</a>
+      <a href="#Food_order">Món Ăn</a>
+      <a href="./orderHistory.html">Đơn hàng của tôi</a>
+      <a href="#about">Về chúng tôi</a>
+      <a href="#review">Đánh Giá</a>
+      <a href="#blogs">Bài viết</a>
+      <a href="#contact_us">Liên hệ</a>
+    </nav>
+    <div class="icons">
+      <div id="menu-btn" class="fas fa-bars"></div>
+      <div id="search-btn" class="fas fa-search"></div>
+      <div id="cart-btn" class="fas fa-shopping-cart"></div>
+      <div id="login-btn" class="fas fa-user"></div>
+    </div>
+    <form action="" class="search-form">
+      <input type="search" placeholder="Tìm Kiếm nào..." id="search-box" />
+      <label for="search-box" class="fas fa-search"></label>
+    </form>
+    <div class="shopping-cart">
+      <div class="renderListCart">
+
+      </div>
+
+      <div class="renderTotal">
+        <!-- <h3 class="total">total :<span class='totalProduct'></span></h3>
+        <a href="#" class="btn">checkout cart</a> -->
+      </div>
+    </div>
+
+    <!-- form-login -->
+    <form class="login-form" id="login-form">
+      <div class="login">
+        <h3>Login form</h3>
+        <input type="email" placeholder="Email" class="box" name="email" />
+        <input type="password" placeholder="Password" class="box" name="password" />
+        <div class="remember">
+          <input type="checkbox" name="" id="remember-me" />
+          <label for="remember-me">remember me</label>
+        </div>
+        <input type="submit" value="login now" class="btn" />
+        <p>Quên mật khẩu? <a href="#">click here</a></p>
+        <p>
+          Bạn Chưa có tài khoản? <a href="./register.html">Tạo tài khoản </a>
+        </p>
+      </div>
+      <div style="display:flex;align-items: center;justify-content: space-around;" class="info-user">
+        <h3 style='display:flex;align-items: center;'></h3>
+        <!-- <h3>Login form</h3> -->
+        <div style="cursor: pointer;" class="logout">Đăng xuất</d>
+        </div>
+    </form>
+  </header>
+  <section style="padding: 8rem 5%;">
+    <h2 style="margin-top: 1rem;">Chi Tiết Đơn Hàng</h2>
+    <table class="table" style="margin-top:55px">
+      <thead style="font-size: 1.4rem;">
+        <tr>
+          <th>Id</th>
+          <th>Tên sản phẩm</th>
+          <th>Số lượng</th>
+          <th>Giá</th>
+          <th style="padding: 0 10rem;">Ảnh</th>
+
+        </tr>
+      </thead>
+      <tbody class="list_orderDetail" style="font-size: 1.2rem;text-transform: capitalize;font-weight: 500;">
+
+      </tbody>
+    </table>
+  </section>
+</body>
+
+</html>
+<script src="./node_modules/axios/dist/axios.min.js"></script>
+
+<script src="./asset/Js/orderDetail.js"></script>
+<script src="./asset/Js/login.js"></script>
+<script src="./asset/Js/cart.js"></script>

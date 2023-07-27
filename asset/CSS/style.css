@@ -1,14 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
 
 * {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   outline: none;
   border: none;
   text-decoration: none;
-  text-transform: capitalize;
   transition: 0.2s linear;
 }
 :root {
@@ -21,11 +20,11 @@
   --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
-@mixin grid($val) {
+/* @mixin grid($val) {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
   gap: 1.5rem;
-}
+} */
 @keyframes sliding-activity {
   form {
     opacity: 0.6;
@@ -40,8 +39,20 @@ html {
   scroll-behavior: smooth;
 }
 section {
-  padding: 3rem 9%;
+  padding: 3rem 5%;
 }
+.renderListCart{
+  height: 300px;
+  overflow-y: scroll;
+
+}
+.renderListCart::-webkit-scrollbar {
+  width: 5px;
+}
+.renderListCart::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
 .btn {
   margin-top: 1rem;
   padding: 0.8rem 3rem;
@@ -50,6 +61,7 @@ section {
   font-size: 1.7rem;
   cursor: pointer;
   display: inline-block;
+  text-transform: capitalize;
 }
 .btn:hover {
   background-color: var(--black);
@@ -65,12 +77,23 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 9%;
+  padding: 0.4rem 4% 0.4rem 6.8%;
 }
 .header .logo {
-  font-size: 2.5rem;
-  font-weight: bolder;
-  color: var(--black);
+font-size: 2.5rem;
+font-weight: bolder;
+color: var(--black);
+width: 10%;
+display: flex;
+justify-content: center;
+align-items: center;
+max-height: 64px;
+font-family: cursive;
+}
+.header__logo-png{
+  max-height: 67px;
+  width: 100%;
+  margin-bottom: 0.6rem;
 }
 .header .logo i {
   color: var(--green);
@@ -101,7 +124,7 @@ section {
 /* search-btn */
 .header .search-form {
   position: absolute;
-  top: -115%;
+  top: -140%;
   right: 2rem;
   width: 50rem;
   border-radius: 0.5rem;
@@ -123,15 +146,18 @@ section {
   height: 100%;
   width: 100%;
   padding: 0 1.2rem;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: var(--black);
   text-transform: none;
 }
 .search-form label {
   font-size: 2.5rem;
-  margin-right: 1.7rem;
   cursor: pointer;
+  margin-right: 1px;
   color: var(--light-color);
+  padding: 1.4rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
 }
 .search-form label:hover {
   color: var(--green);
@@ -145,12 +171,14 @@ div.shopping-cart {
   border-radius: 0.5rem;
   box-shadow: var(--box-shadow);
   width: 35rem;
-  padding: 2rem;
+  padding: 2rem 1.6rem 2rem 1.6rem;
   animation: sliding-activity 0.4s;
 }
 .shopping-cart img {
-  width: 44%;
-  height: 9rem;
+    height: 8rem;
+    width: 12rem;
+    border-radius: 8px;
+    object-fit: cover;
 }
 .shopping-cart .box {
   display: flex;
@@ -162,7 +190,7 @@ div.shopping-cart {
 .shopping-cart .fa-times {
   position: absolute;
   top: 50%;
-  right: 2rem;
+  right: 0.6rem;
   transform: translateY(-50%);
   font-size: 2rem;
   color: var(--light-color);
@@ -186,7 +214,10 @@ div.shopping-cart {
 .shopping-cart .total {
   font-size: 2.2rem;
   color: var(--light-color);
-  text-align: center;
+  text-align: end;
+  border-top: 1px solid #999;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
 }
 .shopping-cart .total span {
   color: var(--black);
@@ -258,6 +289,7 @@ div.shopping-cart {
 
 /* payment */
 .box-container .box {
+  text-transform: capitalize;
 }
 .pay-ments {
   width: 100%;
@@ -312,7 +344,7 @@ form input[type="email"] {
   background: var(--green);
   color: var(--white);
   font-size: 2rem;
-  margin-bottom: 1.2rem;
+  padding:30px 0;
 }
 
 /* home food*/
@@ -332,7 +364,9 @@ form input[type="email"] {
 
 .home {
   padding-top: 14rem;
-  background: rgb(235, 219, 199);
+  background-image:url(../image/food-banner/banner-shop/pexels-waldemar-2290070.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -357,18 +391,28 @@ form input[type="email"] {
 .slide .image img {
   width: 100%;
   animation: fadeUp 0.4s linear;
+      padding: 0rem 6rem 0 6rem;
+      border-radius: 16%;
 }
 .slides-container .active {
   display: flex;
 }
+.content-slide{
+  margin-top: 118px;
+  margin-left: 100px;
+  text-transform: capitalize;
+}
+
 .content-slide h3 {
-  font-size: 4.5rem;
-  color: var(--black);
-  padding: 0.5rem 0;
+    font-size: 4.5rem;
+    color: #fff;
+    padding: 0.5rem 0;
+    text-shadow: 1px 1px 4px #000;
 }
 .content-slide span {
-  color: var(--light-color);
-  font-size: 2rem;
+    color: #fff8f8;
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px #000;
 }
 
 #next-slide,
@@ -385,6 +429,7 @@ form input[type="email"] {
   font-size: 3rem;
   color: var(--black);
   cursor: pointer;
+   border-radius: 50%;
 }
 #next-slide:hover,
 #prev-slide:hover {
@@ -410,9 +455,10 @@ form input[type="email"] {
 
 /* banner food home */
 .banner-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
-  gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+    gap: 2.5rem;
+    padding: 4rem;
 }
 .banner-container .banner {
   position: relative;
@@ -428,12 +474,14 @@ form input[type="email"] {
   width: 100%;
   object-fit: cover;
   border-radius: 6px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
 }
 .banner-container .banner .content {
   position: absolute;
   top: 50%;
   left: 2rem;
   transform: translateY(-50%);
+  text-transform: capitalize;
 }
 .content span {
   color: var(--white);
@@ -482,9 +530,10 @@ form input[type="email"] {
   align-items: center;
   font-size: 2.5rem;
   margin-bottom: 3rem;
-  padding: 1.2rem 0;
+  padding:1.2rem 2.2rem;
   border-bottom: var(--border);
   color: var(--black);
+  text-transform: capitalize;
 }
 .title span {
   color: var(--green);
@@ -521,14 +570,24 @@ form input[type="email"] {
 /* products */
 .products .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: 1.5rem;
+  /* grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); */
+  grid-template-columns:1fr 1fr 1fr 1fr;
+  gap: 2.5rem;
+  padding: 0rem 4rem 0 4rem;
 }
 .products .box {
   position: relative;
   background: var(--light-bg);
   text-align: center;
   overflow: hidden;
+  
+}
+.products .box:hover {
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.5);
+  }
+.products .box:hover .image img{
+  padding: 0;
+
 }
 .products .box:hover .icons {
   top: 0;
@@ -545,7 +604,8 @@ form input[type="email"] {
   background: rgba(244, 244, 244, 0.6);
   gap: 1rem;
 }
-.box .icons a {
+.box .icons div {
+  cursor: pointer;
   font-size: 2rem;
   height: 5rem;
   width: 5rem;
@@ -555,19 +615,20 @@ form input[type="email"] {
   box-shadow: var(--box-shadow);
   color: var(--light-color);
 }
-.box .icons a:hover {
+.box .icons div:hover {
   background: var(--green);
   color: var(--white);
 }
 .box .content {
-  padding: 1.5rem;
+  padding: 0.5rem;
 }
 .box .content > h3 {
   font-size: 2rem;
   color: var(--black);
+  text-transform: capitalize;
 }
 .box .content .price {
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: var(--black);
   padding: 1rem 0;
 }
@@ -584,6 +645,7 @@ form input[type="email"] {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  padding: 1rem;
 }
 
 /* food - about */
@@ -671,6 +733,7 @@ form input[type="email"] {
   align-items: center;
   gap: 1.5rem;
   padding: 2rem 0;
+  justify-content: center;
 }
 .info-container .info-review img {
   height: 7rem;
@@ -850,4 +913,96 @@ textarea {
   width: 100%;
   height: 15rem;
   resize: none;
+}
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #EF3B3A;
+}
+.hidden {
+  display: none;
 }

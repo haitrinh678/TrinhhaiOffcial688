@@ -1,0 +1,536 @@
+{
+  "users": [
+    {
+      "email": "a@gmail.com",
+      "password": "$2a$10$RLIYoAly4V6iaDuYcUBkKePC0dqo/Vku5DJP02.fFHgNV8BA34See",
+      "fullname": "minh nguyễn",
+      "id": 1
+    },
+    {
+      "email": "aolang69@gmail.com",
+      "password": "$2a$10$AbH8eKCpHgW0UqYGcphWHOkFgU7kXBjb7jkvNQvFT17n.pyop/hMG",
+      "fullname": "minh nguyễn",
+      "id": 2
+    },
+    {
+      "email": "b@gmail.com",
+      "password": "$2a$10$gHnt.q.7h8yFutEbNjBW7.QdBSdSO2F.m7fMnIRZMfMhrnv7UG4Ti",
+      "fullname": "minh nguyen",
+      "id": 3
+    },
+    {
+      "email": "trinhdinhhai688@gmail.com",
+      "password": "$2a$10$28qUe9ASEkBv2cIqpLG5GOKsNDSUPD4TAVkoja0qa0qj.UcHLJBOq",
+      "fullname": "Trinh Dinh Hai",
+      "id": 4
+    },
+    {
+      "email": "11122@gmail.com",
+      "password": "$2a$10$Jd0FCAyZ/qPXSsu2wuTrFu/G7ZI8lOf97O7sHD4yoACjB3/Zyq7TG",
+      "fullname": "hai trinh",
+      "id": 5
+    }
+  ],
+  "carts": [
+    {
+      "id": "123",
+      "user_id": "231",
+      "products": [
+        {
+          "product_id": 4,
+          "quantity": 1
+        }
+      ]
+    }
+  ],
+  "orders": [
+    {
+      "id": "19d9d72ed21b7",
+      "payment_method": 1,
+      "fullname": "minhdeptraiqua123",
+      "address": "Phố bái thị trấn nho quan",
+      "phoneNumber": "0839704123",
+      "order_date": 1677063165,
+      "user_id": 1,
+      "order_items": [
+        {
+          "id": "1",
+          "name": "organic food",
+          "price": "18.99",
+          "image": "http://127.0.0.1:5500/asset/image/food-menu/food-menu_5.png",
+          "quantityInCart": 2
+        }
+      ]
+    },
+    {
+      "id": "9369bb6c4b811",
+      "payment_method": 1,
+      "user_id": 3,
+      "fullname": "minh nguyễn",
+      "address": "ha noi",
+      "order_date": 1690206375,
+      "phoneNumber": "0839704122",
+      "order_items": [
+        {
+          "id": "1",
+          "name": "organic food",
+          "price": "18.99",
+          "image": "http://127.0.0.1:5500/asset/image/food-menu/food-menu_5.png",
+          "quantityInCart": 1
+        },
+        {
+          "id": "2",
+          "name": "organic food 1",
+          "price": "18.22",
+          "image": "http://127.0.0.1:5500/asset/image/food-menu/food-menu_5.png",
+          "quantityInCart": 2
+        }
+      ]
+    },
+    {
+      "id": "184dc075dd462",
+      "payment_method": 1,
+      "user_id": 3,
+      "fullname": "minh nguyễn",
+      "address": "ninh binh",
+      "order_date": 1690207021,
+      "phoneNumber": "0839704122",
+      "order_items": [
+        {
+          "id": "5",
+          "name": "organic food 5",
+          "price": "18.32",
+          "image": "http://127.0.0.1:5500/asset/image/food-menu/food-menu_5.png",
+          "quantityInCart": 2
+        },
+        {
+          "id": "3",
+          "name": "organic food 3",
+          "price": "18.32",
+          "image": "http://127.0.0.1:5500/asset/image/food-menu/food-menu_5.png",
+          "quantityInCart": 1
+        }
+      ]
+    },
+    {
+      "id": "1efe257a36ff5",
+      "payment_method": 1,
+      "user_id": 4,
+      "fullname": "Trịnh Đình Hải",
+      "address": "Xã Xuân Tín, Huyện Thọ Xuân, Tỉnh Thanh Hóa",
+      "order_date": 1690216055,
+      "phoneNumber": "0355724014",
+      "order_items": [
+        {
+          "id": "3",
+          "name": "organic food 3",
+          "price": "18.32",
+          "image": "http://127.0.0.1:5500/asset/image/food-menu/food-menu_5.png",
+          "quantityInCart": 1
+        },
+        {
+          "id": "2",
+          "name": "organic food 1",
+          "price": "18.22",
+          "image": "http://127.0.0.1:5500/asset/image/food-menu/food-menu_5.png",
+          "quantityInCart": 1
+        }
+      ]
+    },
+    {
+      "id": "3e51100a7c4fa",
+      "payment_method": 1,
+      "user_id": 4,
+      "fullname": "Trịnh Đình Hải",
+      "address": "Xã Xuân Tín, Huyện Thọ Xuân, Tỉnh Thanh Hóa",
+      "order_date": 1690216213,
+      "phoneNumber": "0355724014",
+      "order_items": [
+        {
+          "id": "3",
+          "name": "organic food 3",
+          "price": "18.32",
+          "image": "http://127.0.0.1:5500/asset/image/food-menu/food-menu_5.png",
+          "quantityInCart": 2
+        }
+      ]
+    },
+    {
+      "id": "1c32ce3497f4e",
+      "payment_method": 1,
+      "user_id": 4,
+      "fullname": "Trịnh Đình Hải",
+      "address": "Xã Xuân Tín, Huyện Thọ Xuân, Tỉnh Thanh Hóa",
+      "order_date": 1690217162,
+      "phoneNumber": "0355724014",
+      "order_items": [
+        {
+          "id": "4",
+          "name": "organic food 4",
+          "price": "18.32",
+          "image": "http://127.0.0.1:5500/asset/image/food-menu/1(1).jpg",
+          "quantityInCart": 2
+        },
+        {
+          "id": "5",
+          "name": "san pham3",
+          "price": "18.32",
+          "image": "http://127.0.0.1:5500/asset/image/food-menu/1(1).jpg",
+          "quantityInCart": 1
+        }
+      ]
+    },
+    {
+      "id": "de0c67c4117da",
+      "payment_method": 1,
+      "user_id": 4,
+      "fullname": "Trịnh Đình Hải",
+      "address": "Xã Xuân Tín, Huyện Thọ Xuân, Tỉnh Thanh Hóa",
+      "order_date": 1690288541,
+      "phoneNumber": "0355724014",
+      "order_items": [
+        {
+          "id": "2",
+          "name": "organic food 1",
+          "price": "18.22",
+          "image": "http://127.0.0.1:5500/asset/image/food-menu/food-menu_5.png",
+          "quantityInCart": 2
+        },
+        {
+          "id": "3",
+          "name": "organic food 3",
+          "price": "18.32",
+          "image": "http://127.0.0.1:5500/asset/image/food-menu/food-menu_5.png",
+          "quantityInCart": 4
+        }
+      ]
+    },
+    {
+      "id": "378e483148e5",
+      "payment_method": 1,
+      "user_id": 1,
+      "fullname": "minh nguyễn",
+      "address": "Phố bái thị trấn nho quan",
+      "order_date": 1690302930,
+      "phoneNumber": "0839704122",
+      "order_items": [
+        {
+          "id": "10",
+          "name": "organic food 10",
+          "price": "18.99",
+          "image": "http://127.0.0.1:5500/asset/image/food-menu/food-menu_5.png",
+          "quantityInCart": 1
+        }
+      ]
+    },
+    {
+      "id": "babfe0027acd6",
+      "payment_method": 1,
+      "user_id": 4,
+      "fullname": "Trịnh Đình Hải",
+      "address": "Xã Xuân Tín, Huyện Thọ Xuân, Tỉnh Thanh Hóa",
+      "order_date": 1690306887,
+      "phoneNumber": "0355724014",
+      "order_items": [
+        {
+          "id": "6",
+          "name": "san pham3",
+          "price": "18.32",
+          "image": "http://127.0.0.1:5500/asset/image/food-menu/food-menu_5.png",
+          "quantityInCart": 1
+        },
+        {
+          "id": "8",
+          "name": "san pham3",
+          "price": "18.32",
+          "image": "http://127.0.0.1:5500/asset/image/food-menu/food-menu_5.png",
+          "quantityInCart": 2
+        },
+        {
+          "id": "5",
+          "name": "organic food 4",
+          "price": "18.32",
+          "image": "http://127.0.0.1:5500/asset/image/food-menu/food-menu_5.png",
+          "quantityInCart": 1
+        }
+      ]
+    },
+    {
+      "id": "83ad2ba4f71f4",
+      "payment_method": 1,
+      "user_id": 4,
+      "fullname": "Trịnh Đình Hải",
+      "address": "Xã Xuân Tín, Huyện Thọ Xuân, Tỉnh Thanh Hóa",
+      "order_date": 1690309557,
+      "phoneNumber": "0355724014",
+      "order_items": [
+        {
+          "id": "2",
+          "name": "organic food 10",
+          "price": "18.99",
+          "image": "http://127.0.0.1:5500/asset/image/food-menu/food-menu_5.png",
+          "quantityInCart": 1
+        }
+      ]
+    },
+    {
+      "id": "c0fd286369579",
+      "payment_method": 1,
+      "user_id": 4,
+      "fullname": "Trịnh Đình Hải",
+      "address": "Xã Xuân Tín, Huyện Thọ Xuân, Tỉnh Thanh Hóa",
+      "order_date": 1690366808,
+      "phoneNumber": "0355724014",
+      "order_items": [
+        {
+          "id": "12",
+          "name": "san pham3",
+          "price": "18.32",
+          "image": "../asset/image/food-menu/1(12).jpg",
+          "quantityInCart": 3
+        },
+        {
+          "id": "10",
+          "name": "san pham3",
+          "price": "18.32",
+          "image": "../asset/image/food-menu/1(10).jpg",
+          "quantityInCart": 2
+        },
+        {
+          "id": "9",
+          "name": "organic food 4",
+          "price": "18.32",
+          "image": "../asset/image/food-menu/1(9).jpg",
+          "quantityInCart": 1
+        },
+        {
+          "id": "7",
+          "name": "san pham3",
+          "price": "18.32",
+          "image": "../asset/image/food-menu/1(7).jpg",
+          "quantityInCart": 1
+        }
+      ]
+    },
+    {
+      "id": "7a147304dcd73",
+      "payment_method": 1,
+      "user_id": 4,
+      "fullname": "Trịnh Đình Hải",
+      "address": "Xã Xuân Tín, Huyện Thọ Xuân, Tỉnh Thanh Hóa",
+      "order_date": 1690440445,
+      "phoneNumber": "0355724014",
+      "order_items": [
+        {
+          "id": "10",
+          "name": "san pham3",
+          "price": "18.32",
+          "image": "../asset/image/food-menu/1(10).jpg",
+          "quantityInCart": 2
+        },
+        {
+          "id": "2",
+          "name": "organic food 10",
+          "price": "18.99",
+          "image": "../asset/image/food-menu/1(2).jpg",
+          "quantityInCart": 2
+        },
+        {
+          "id": "3",
+          "name": "organic food 1",
+          "price": "18.22",
+          "image": "../asset/image/food-menu/1(3).jpg",
+          "quantityInCart": 3
+        },
+        {
+          "id": "7",
+          "name": "san pham3",
+          "price": "18.32",
+          "image": "../asset/image/food-menu/1(7).jpg",
+          "quantityInCart": 1
+        },
+        {
+          "id": "8",
+          "name": "san pham3",
+          "price": "18.32",
+          "image": "../asset/image/food-menu/1(8).jpg",
+          "quantityInCart": 1
+        },
+        {
+          "id": "11",
+          "name": "san pham3",
+          "price": "18.32",
+          "image": "../asset/image/food-menu/1(11).jpg",
+          "quantityInCart": 1
+        },
+        {
+          "id": "12",
+          "name": "san pham3",
+          "price": "18.32",
+          "image": "../asset/image/food-menu/1(12).jpg",
+          "quantityInCart": 1
+        },
+        {
+          "id": "9",
+          "name": "organic food 4",
+          "price": "18.32",
+          "image": "../asset/image/food-menu/1(9).jpg",
+          "quantityInCart": 1
+        },
+        {
+          "id": "5",
+          "name": "organic food 4",
+          "price": "18.32",
+          "image": "../asset/image/food-menu/1(5).jpg",
+          "quantityInCart": 2
+        },
+        {
+          "id": "4",
+          "name": "organic food 3",
+          "price": "18.32",
+          "image": "../asset/image/food-menu/1(4).jpg",
+          "quantityInCart": 1
+        }
+      ]
+    },
+    {
+      "id": "800f4f4235ec2",
+      "payment_method": 1,
+      "user_id": 4,
+      "fullname": "Trịnh Đình Hải",
+      "address": "Xã Xuân Tín, Huyện Thọ Xuân, Tỉnh Thanh Hóa",
+      "order_date": 1690444396,
+      "phoneNumber": "0355724014",
+      "order_items": [
+        {
+          "id": "2",
+          "name": "Vẹn Hấp Mẻ Ớt",
+          "price": "120.000",
+          "image": "../asset/image/food-menu/1(2).jpg",
+          "quantityInCart": 1
+        }
+      ]
+    },
+    {
+      "id": "a30eb9e6e5a51",
+      "payment_method": 1,
+      "user_id": 4,
+      "fullname": "Trịnh Đình Hải",
+      "address": "Xã Xuân Tín, Huyện Thọ Xuân, Tỉnh Thanh Hóa",
+      "order_date": 1690450415,
+      "phoneNumber": "0355724014",
+      "order_items": [
+        {
+          "id": "3",
+          "name": "Combo Hải Sản ",
+          "price": "680.000",
+          "image": "../asset/image/food-menu/1(3).jpg",
+          "quantityInCart": 1
+        },
+        {
+          "id": "11",
+          "name": "Thịt Bò Nướng Tái",
+          "price": "230.000",
+          "image": "../asset/image/food-menu/1(11).jpg",
+          "quantityInCart": 1
+        },
+        {
+          "id": "1",
+          "name": "Tôm Biển Hấp",
+          "price": "180.000",
+          "image": "../asset/image/food-menu/1(1).jpg",
+          "quantityInCart": 1
+        },
+        {
+          "id": "2",
+          "name": "Vẹn Hấp Mẻ Ớt",
+          "price": "120.000",
+          "image": "../asset/image/food-menu/1(2).jpg",
+          "quantityInCart": 1
+        }
+      ]
+    }
+  ],
+  "admin": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "123",
+      "fullname": "Minh nguyễn"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Tôm Biển Hấp",
+      "price": "180.000",
+      "image": "../asset/image/food-menu/1(1).jpg"
+    },
+    {
+      "id": "2",
+      "name": "Vẹn Hấp Mẻ Ớt",
+      "price": "120.000",
+      "image": "../asset/image/food-menu/1(2).jpg"
+    },
+    {
+      "id": "3",
+      "name": "Combo Hải Sản ",
+      "price": "680.000",
+      "image": "../asset/image/food-menu/1(3).jpg"
+    },
+    {
+      "id": "4",
+      "name": "Cá Thu Chiên Xù",
+      "price": "140.000",
+      "image": "../asset/image/food-menu/1(4).jpg"
+    },
+    {
+      "id": "5",
+      "name": "Hải Sản Trộn",
+      "price": "220.000",
+      "image": "../asset/image/food-menu/1(5).jpg"
+    },
+    {
+      "id": "6",
+      "name": "Cá Thu Cauliflower",
+      "price": "130.000",
+      "image": "../asset/image/food-menu/1(6).jpg"
+    },
+    {
+      "id": "7",
+      "name": "Hàu Chấm Muối Ớt",
+      "price": "190000",
+      "image": "../asset/image/food-menu/1(7).jpg"
+    },
+    {
+      "id": "8",
+      "name": "Hành Nướng Cháy",
+      "price": "68.000",
+      "image": "../asset/image/food-menu/1(8).jpg"
+    },
+    {
+      "id": "9",
+      "name": "Tôm Hùm Hấp Cay",
+      "price": "340.000",
+      "image": "../asset/image/food-menu/1(9).jpg"
+    },
+    {
+      "id": "10",
+      "name": "Cơm Cuộn Lá Rong",
+      "price": "150.000",
+      "image": "../asset/image/food-menu/1(10).jpg"
+    },
+    {
+      "id": "11",
+      "name": "Thịt Bò Nướng Tái",
+      "price": "230.000",
+      "image": "../asset/image/food-menu/1(11).jpg"
+    },
+    {
+      "id": "12",
+      "name": "Tôm Hùm Nướng Than",
+      "price": "90.000",
+      "image": "../asset/image/food-menu/1(12).jpg"
+    }
+  ]
+}

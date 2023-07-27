@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link
+      rel="shortcut icon"
+      href="./asset/image/food-home/logo-beer-title.webp"
+      type="image/x-icon"
+    />
+    <!-- link font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./asset/CSS/style.css" />
+    <link rel="stylesheet" href="./asset/CSS/responsive.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="logo"><i class="fas fa-beer"></i>VuBeer</a>
+      <nav class="nav-bar">
+        <a href="./index.html">Trang Chủ</a>
+        <a href="#Food_order">Món Ăn</a>
+        <a href="./orderHistory.html">Đơn hàng của tôi</a>
+        <a href="#about">Về chúng tôi</a>
+        <a href="#review">Đánh Giá</a>
+        <a href="#blogs">Bài viết</a>
+        <a href="#contact_us">Liên hệ</a>
+      </nav>
+      <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="search-btn" class="fas fa-search"></div>
+        <div id="cart-btn" class="fas fa-shopping-cart"></div>
+        <div id="login-btn" class="fas fa-user"></div>
+      </div>
+      <form action="" class="search-form">
+        <input type="search" placeholder="Tìm Kiếm nào..." id="search-box" />
+        <label for="search-box" class="fas fa-search"></label>
+      </form>
+      <div class="shopping-cart">
+        <div class="renderListCart">
+  
+        </div>
+  
+        <div class="renderTotal">
+          <!-- <h3 class="total">total :<span class='totalProduct'></span></h3>
+          <a href="#" class="btn">checkout cart</a> -->
+        </div>
+      </div>
+   
+      <!-- form-login -->
+      <form class="login-form" id="login-form">
+       <div class="login">
+        <h3>Login form</h3>
+        <input type="email" placeholder="Email" class="box" name="email" />
+        <input
+          type="password"
+          placeholder="Password"
+          class="box"
+          name="password"
+        />
+        <div class="remember">
+          <input type="checkbox" name="" id="remember-me" />
+          <label for="remember-me">remember me</label>
+        </div>
+        <input type="submit" value="login now" class="btn" />
+        <p>Quên mật khẩu? <a href="#">click here</a></p>
+        <p>
+          Bạn Chưa có tài khoản? <a href="./register.html">Tạo tài khoản </a>
+        </p>
+       </div>
+       <div style="display:flex;align-items: center;justify-content: space-around;" class="info-user">
+        <h3 style='display:flex;align-items: center;'></h3>
+        <!-- <h3>Login form</h3> -->
+        <div style="cursor: pointer;" class="logout">Đăng xuất</d>
+       </div>
+      </form>
+    </header>
+    <main>
+      <div class="login-page">
+         <div class="form">
+           <form class="login-form" id="checkout-form">
+            <input type="text" placeholder="Họ và tên" name='fullname'/>
+             <input type="text" placeholder="Số điện thoại" name='phoneNumber'/>
+             <input type="text" placeholder="Địa chỉ" name='address'/>
+             <button type="submit">Đặt hàng</button>
+           </form>
+         </div>
+       </div>
+    </main>
+     <!-- footer section stars  -->
+     <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>extra links</h3>
+          <a href="#"><i class="fas fa-arrow-right"></i>my order</a>
+          <a href="#"><i class="fas fa-arrow-right"></i>my favorite</a>
+          <a href="#"><i class="fas fa-arrow-right"></i>my wishlist</a>
+          <a href="#"><i class="fas fa-arrow-right"></i>my account</a>
+          <a href="#"><i class="fas fa-arrow-right"></i>terms or use</a>
+        </div>
+
+        <div class="box">
+          <h3>follow me</h3>
+          <a href="#"><i class="fab fa-facebook-f"></i>facebook</a>
+          <a href="#"><i class="fab fa-twitter"></i>twitter</a>
+          <a href="#"><i class="fab fa-instagram"></i>instagram</a>
+          <a href="#"><i class="fab fa-linkedin"></i>linkedin</a>
+          <a href="#"><i class="fab fa-telegram"></i>telegram</a>
+        </div>
+
+        <div class="box">
+          <h3>newsletter</h3>
+          <p>subscribe for latest updates</p>
+          <form action="">
+            <input type="email" required placeholder="enter your email" id="" />
+            <input type="submit" value="subscribe" class="btn" />
+          </form>
+          <img src="./asset/image/payment/payment_1.png" class="pay-ments" />
+        </div>
+      </div>
+    </section>
+    <section class="credit">
+      created by Trinh Dinh Hai designer | all rights reserved!
+    </section>
+    <!-- footer section Ends -->
+
+  </body>
+</html>
+<script src="./node_modules/axios/dist/axios.min.js"></script>
+<script src="./asset/Js/checkout.js"></script>
+<script src="./asset/Js/login.js"></script>
+<script src="./asset/Js/cart.js"></script>
