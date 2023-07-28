@@ -169,10 +169,10 @@ div.shopping-cart {
   right: -200%;
   background: var(--white);
   border-radius: 0.5rem;
-  box-shadow: var(--box-shadow);
-  width: 35rem;
-  padding: 2rem 1.6rem 2rem 1.6rem;
+  width: 40rem;
+  padding: 1rem 1.4rem ;
   animation: sliding-activity 0.4s;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
 }
 .shopping-cart img {
     height: 8rem;
@@ -186,6 +186,8 @@ div.shopping-cart {
   gap: 1.5rem;
   margin-bottom: 1.5rem;
   position: relative;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.08);
+  margin-top: 0.5rem;
 }
 .shopping-cart .fa-times {
   position: absolute;
@@ -225,6 +227,7 @@ div.shopping-cart {
 .shopping-cart .btn {
   width: 100%;
   text-align: center;
+  border-radius: 4px;
 }
 
 /* login - form */

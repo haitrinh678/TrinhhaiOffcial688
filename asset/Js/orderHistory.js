@@ -26,7 +26,7 @@ async function displayListOrder() {
    <td>${order.order_items.reduce(
     (total, product) => total + (product.quantityInCart * product.price),
     0
-  )}₫</td>
+  ).toLocaleString('de-DE')}₫</td>
 
    <td class="action">
    <a href='../../orderDetail.html?order_id=${

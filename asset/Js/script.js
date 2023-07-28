@@ -110,12 +110,13 @@ function hanldeAddToCart() {
   const products = localStorage.getItem("products")
     ? JSON.parse(localStorage.getItem("products"))
     : null;
-  const carts = localStorage.getItem("carts")
-    ? JSON.parse(localStorage.getItem("carts"))
-    : null;
+
   const listItem = document.querySelector("#list-item");
   listItem.addEventListener("click", (e) => {
     if (e.target.closest(".addToCart")) {
+        const carts = localStorage.getItem("carts")
+    ? JSON.parse(localStorage.getItem("carts"))
+    : null;
       const id = e.target.getAttribute("data-id");
       const findProduct = products.find((item) => item.id == id);
       const cartIndex = carts.findIndex((item) => item.id === id);
@@ -170,10 +171,10 @@ function displayItemInCart() {
     <i class="fas fa-times deleteItemInCart" data-id="${itemInCart.id}"></i>
     <img src="${itemInCart.image}" alt="">
     <div class="content">
-      <h3>${itemInCart.name}</h3>
+      <h3  style="font-size:1.6rem">${itemInCart.name}</h3>
       <span class="quantity">${itemInCart.quantityInCart}</span>
       <span class="multiply ">x</span>
-      <span class="price">${itemInCart.price} đ</span>
+      <span class="price">${Number(itemInCart.price).toLocaleString('de-DE')} đ</span>
     </div>
   </div>`;
     })
@@ -182,7 +183,7 @@ function displayItemInCart() {
 
   renderTotal.innerHTML = emptyCart
     ? ""
-    : `<h3 class="total">Tổng: <span class='totalProduct'>${totalQuantity.toFixed(3)} ₫</span></h3>
+    : `<h3 class="total">Tổng: <span class='totalProduct'>${totalQuantity.toLocaleString('de-DE')} ₫</span></h3>
   <a href="../../checkout.html"  class="btn checkoutCart">Thanh Toán</a>`;
 }
 
@@ -201,7 +202,7 @@ function displayItem(products) {
     </div>
     <div class="content">
       <h3>${product.name}</h3>
-      <div class="price">${product.price} ₫</div>
+      <div class="price">${Number(product.price).toLocaleString('de-DE')} ₫</div>
       <div class="stars">
         <i class="fas fa-star"></i>
         <i class="fas fa-star"></i>
@@ -257,14 +258,14 @@ loginForm.addEventListener("submit", async (e) => {
     email: email.value,
     password: password.value,
     });
-     if (handleLogin.status == 200) {
-    alert("Đăng nhập thành cống");
+    if (handleLogin.status == 200) {
+      alert("Đăng Nhập Thành Công, Chào Mừng Bạn Đã Đến với Nhà Hàng của chúng tôi!");
     localStorage.setItem("current_user", JSON.stringify(handleLogin.data));
     FormLogin.classList.toggle("active");
     hideLoginForm();
     displayInfoUser();
   }
   } catch (error) {
-    alert("Đăng nhập thất bại");
+    alert("Đăng nhập thất bại, Tài khoản hoặc mật khẩu không chính xác.");
   }
 });

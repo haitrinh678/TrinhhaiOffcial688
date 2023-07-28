@@ -72,12 +72,13 @@ loginForm.addEventListener("submit", async (e) => {
     email: email.value,
     password: password.value,
     });
-     if (handleLogin.status == 200) {
-    alert("Đăng nhập thành cống");
+    if (handleLogin.status == 200) {
+    window.location = "../../index.html#";
+    alert("Đăng Nhập Thành Công, Chào Mừng Bạn Đã Đến với Nhà Hàng của chúng tôi!");
     localStorage.setItem("current_user", JSON.stringify(handleLogin.data));
     FormLogin.classList.toggle("active");
     hideLoginForm();
-    displayInfoUser();
+      displayInfoUser();
   }
   } catch (error) {
     alert("Đăng nhập thất bại,Tài khoản hoặc mật khẩu không chính xác !");

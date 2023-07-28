@@ -21,7 +21,7 @@ async function displayListOrder() {
    <td>${order_id}</td>
    <td>${order.name}</td>
    <td>Số Lượng: ${order.quantityInCart}</td>
-   <td>${order.price} ₫</td>
+   <td>${Number(order.price).toLocaleString('de-DE')} ₫</td>
    <td><img style='height:200px ; width:200px;' src='${order.image}'/></td>
  </td>
    
@@ -35,7 +35,7 @@ const current_user = localStorage.getItem("current_user")
 : null;
 async function checkUserLogin() {
   if (!current_user) {
-    window.location = "http://127.0.0.1:5500";
+    window.location = "../../index.html";
   }
 }
 document.addEventListener("DOMContentLoaded", (e) => {

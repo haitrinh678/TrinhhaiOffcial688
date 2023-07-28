@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./asset/image/food-home/pngegg.png" type="image/x-icon" />
+
   <title>Lịch Sử Mua Hàng</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="./asset/CSS/style.css" />
@@ -24,6 +26,10 @@
       .nav-bar__History {
         border: none !important;
       }
+    }
+
+    .shopping-cart>.renderListCart>.box>.content>h3 {
+      font-size: 1.6rem;
     }
   </style>
   <header class="header">
@@ -64,14 +70,14 @@
     <!-- form-login -->
     <form class="login-form" id="login-form">
       <div class="login">
-        <h3>Login form</h3>
-        <input type="email" placeholder="Email" class="box" name="email" />
-        <input type="password" placeholder="Password" class="box" name="password" />
+        <h3>Đăng Nhập</h3>
+        <input type="email" placeholder="Email" required class="box" name="email" />
+        <input type="password" placeholder="Password" required class="box" name="password" />
         <div class="remember">
           <input type="checkbox" name="" id="remember-me" />
-          <label for="remember-me">remember me</label>
+          <label for="remember-me">Ghi nhớ mật khẩu</label>
         </div>
-        <input type="submit" value="login now" class="btn" />
+        <input type="submit" value="Đăng Nhập" class="btn" />
         <p>Quên mật khẩu? <a href="#">click here</a></p>
         <p>
           Bạn Chưa có tài khoản? <a href="./register.html">Tạo tài khoản </a>

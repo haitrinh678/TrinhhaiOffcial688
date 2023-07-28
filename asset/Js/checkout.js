@@ -20,13 +20,18 @@ function handleCheckout() {
   const current_user = localStorage.getItem("current_user")
 ? JSON.parse(localStorage.getItem("current_user"))
 : null;
-  const carts = localStorage.getItem("carts")
-    ? JSON.parse(localStorage.getItem("carts"))
-    : null;
+
   const checkoutForm = document.getElementById("checkout-form");
   checkoutForm.addEventListener("submit", async (e) => {
-    console.log('a')
     e.preventDefault();
+      const carts = localStorage.getItem("carts")
+    ? JSON.parse(localStorage.getItem("carts"))
+      : null;
+    if (carts.length == 0) {
+      window.location="../../index.html#Food_order"
+      alert("Không có sản phẩm trong giỏ hàng, Vui lòng nhấn OK để xem thêm sản phẩm tại đây!")
+      return;
+    }
     const { fullname, address, phoneNumber } = checkoutForm;
     const handleCheckout = await axios.post("http://localhost:3000/orders", {
       id: generateId(),
@@ -40,7 +45,7 @@ function handleCheckout() {
     });
     if (handleCheckout.status == 201) {
       alert("Đặt hàng thành công");
-      window.location = "http://127.0.0.1:5500/orderHistory.html";
+      window.location.href = "../../orderHistory.html";
       localStorage.setItem("carts", JSON.stringify([]));
     }
   });
@@ -54,7 +59,14 @@ async function checkUserLogin() {
     alert('Vui lòng đăng nhập để đặt hàng')
   }
 }
+checkUserLogin()
 document.addEventListener("DOMContentLoaded", (e) => {
-  checkUserLogin()
+  const carts = localStorage.getItem("carts")
+    ? JSON.parse(localStorage.getItem("carts"))
+    : null;
+   if (carts.length == 0) {
+     alert("Vui lòng thêm sản phẩm vào giỏ hàng để thanh toán");
+      window.location = "../../index.html#Food_order";
+    }
   handleCheckout();
 });
